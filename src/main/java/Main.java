@@ -1,12 +1,10 @@
 package org.example;
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Race race = new Race();
-        ArrayList<Car> cars = new ArrayList<>();
 
         for (int i = 1; i <= 3; i = i + 1) {
             System.out.println(String.format("Введите название машины №%d:", i));
@@ -16,7 +14,6 @@ public class Main {
                 int speed = scanner.nextInt();
                 Car car = new Car(name, speed);
                 if (speed >= 0 && speed <= 250) {
-                    cars.add(car);
                     race.raceLeader(car);
                     break;
                 }
